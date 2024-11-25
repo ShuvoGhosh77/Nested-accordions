@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ Nested accordions</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body {
+        max-width: 1000px;
+        margin: auto;
+      }
+      .accordions-items {
+        border-bottom: 1px solid #f2f2f2;
+      }
+
+      .accordions-header {
+        cursor: pointer;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s ease;
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 600;
+        color: rgb(102, 102, 102);
+      }
+
+      .accordions-header .icon {
+        font-size: 25px;
+        font-weight: bold;
+        color: #111111;
+        transition: transform 0.1s ease-in-out;
+      }
+
+      .accordions-header.open .icon {
+        transform: rotate(45deg);
+        color: #111111;
+      }
+
+      .accordions-content {
+        display: none;
+        background: rgb(252, 252, 252);
+      }
+      .nested-accordions {
+        padding: 50px 40px;
+      }
+      .nested-accordions .accordions-header {
+        background-color: #ffffff;
+        padding: 15px;
+      }
+
+      .nested-accordions .accordions-items {
+        margin-bottom: 0px;
+      }
+      .nested-accordions .accordions-content {
+        padding: 10px;
+        font-size: 18px;
+        line-height: 31px;
+        color: rgb(102, 102, 102);
+        font-weight: 400;
+        padding: 0 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordions">
+      <!-- item 1 -->
+      <div class="accordions-items">
+        <div class="accordions-header">
+          Payment Methods
+          <span class="icon">+</span>
+        </div>
+        <div class="accordions-content">
+          <div class="nested-accordions">
+            <div class="accordions-items">
+              <div class="accordions-header">
+                What are your payment options?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  Our secure and easy-to-use payment systems let you pay using
+                  your credit card, through PayPal, and more.
+                </p>
+              </div>
+            </div>
+            <div class="accordions-items">
+              <div class="accordions-header">
+                How do I get an invoice?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  We will send you an invoice through email and you can also
+                  check it within the payment link.
+                </p>
+                <p>
+                  If you have questions about your invoice, let us know and
+                  we’ll address them to ensure the accuracy of all your payment
+                  details.
+                </p>
+                <p>
+                  If you have questions that are not on this page, contact us
+                  through email at
+                  <a
+                    style="color: #73bf44; text-decoration: none"
+                    href="mailto:contact@clippingpathstudio.com"
+                    class="rank-math-link"
+                    >contact@clippingpathstudio.com</a
+                  >, and we’ll be happy to address your queries.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- item 2 -->
+      <div class="accordions-items">
+        <div class="accordions-header">
+          Pricing
+          <span class="icon">+</span>
+        </div>
+        <div class="accordions-content">
+          <div class="nested-accordions">
+            <div class="accordions-items">
+              <div class="accordions-header">
+                How much is the fee per image?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  Check out our detailed pricing for each of our services on our
+                  <span
+                    ><a
+                      style="color: #73bf44; text-decoration: none"
+                      href="https://clippingpathstudio.com/pricing/"
+                      target="_blank"
+                      >Price Chart</a
+                    ></span
+                  >.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- item 3 -->
+      <div class="accordions-items">
+        <div class="accordions-header">
+          Our Services
+          <span class="icon">+</span>
+        </div>
+        <div class="accordions-content">
+          <div class="nested-accordions">
+            <div class="accordions-items">
+              <div class="accordions-header">
+                Are your services available 24/7?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  Yes. Our team of experts works in shifts to ensure you get the
+                  support you need round-the-clock.
+                </p>
+              </div>
+            </div>
+            <div class="accordions-items">
+              <div class="accordions-header">
+                What type of image and photo editing can you do?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  We can do a lot of digital photo editing services for you,
+                  including background removal, image masking, clipping path,
+                  Photoshop retouching, drop shadow, and color correction.
+                </p>
+              </div>
+            </div>
+            <div class="accordions-items">
+              <div class="accordions-header">
+                Can I get customized photoshop and image editing services?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  Definitely! You can have extensive control over your orders.
+                </p>
+                <p>
+                  Contact us to let us know your unique specifications and
+                  instructions. We will try our best to accommodate your
+                  requirements.
+                </p>
+              </div>
+            </div>
+            <div class="accordions-items">
+              <div class="accordions-header">
+                What is your regular turnaround time?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  Our turnaround times depend on the quantity, quality, and
+                  level of complexity of your projects.
+                </p>
+                <p>
+                  We’ll inform you of the estimated time frame to finish your
+                  projects when we send you the price quotes.
+                </p>
+                <p>
+                  We aim to give you the most reasonable price possible while
+                  providing exceptional work and sending your files the soonest.
+                </p>
+              </div>
+            </div>
+            <div class="accordions-items">
+              <div class="accordions-header">
+                Can I speak directly with someone from your team?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  Of course! You can contact us directly through our phone
+                  number for any questions, concerns, or special requirements
+                  you have with your orders.
+                </p>
+                <p>
+                  If you can’t reach us, send us an email and one of our team
+                  members will get back to you or call you as soon as possible.
+                </p>
+              </div>
+            </div>
+            <div class="accordions-items">
+              <div class="accordions-header">
+                Do you offer customer support?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  We provide assistance to existing customers through email and
+                  phone. Click
+                  <span
+                    ><a
+                      style="color: #73bf44; text-decoration: none"
+                      href="https://clippingpathstudio.com/photo-editing-services/"
+                      target="_blank"
+                      >here</a
+                    ></span
+                  >
+                  to learn more.
+                </p>
+              </div>
+            </div>
+            <div class="accordions-items">
+              <div class="accordions-header">
+                What can I do if I am unsatisfied with your work?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  Our job is not over until our clients are 100% satisfied. You
+                  can get unlimited rework for free until you’re happy with our
+                  work and as long as there are no violations to our Terms and
+                  Conditions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- item 4 -->
+      <div class="accordions-items">
+        <div class="accordions-header">
+          Image Uploading and Downloading
+          <span class="icon">+</span>
+        </div>
+        <div class="accordions-content">
+          <div class="nested-accordions">
+            <div class="accordions-items">
+              <div class="accordions-header">
+                How do I upload my files?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  Use our
+                  <span
+                    ><a
+                      style="color: #73bf44; text-decoration: none"
+                      href="https://clippingpathstudio.com/get-a-quote/"
+                      target="_blank"
+                      >Get a Quote</a
+                    ></span
+                  >
+                  form to upload single images or files in bulk. You can also
+                  insert a drive link where we can access your files.
+                </p>
+              </div>
+            </div>
+            <div class="accordions-items">
+              <div class="accordions-header">
+                Is there a daily file size limit to the files I can upload or
+                download on your website?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  Our server carries unlimited space, allowing you limitless and
+                  hassle-free file transfers anytime.
+                </p>
+              </div>
+            </div>
+            <div class="accordions-items">
+              <div class="accordions-header">
+                How do I know my files are ready for download?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  We will send you an email notification once your edited
+                  photos/images are available for download from our server.
+                </p>
+              </div>
+            </div>
+            <div class="accordions-items">
+              <div class="accordions-header">
+                How do I download my edited photos/images?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  We use File Transfer Protocol (FTP) servers to store your
+                  images. We’ll create a profile for you and provide you the
+                  specific login information through your email.
+                </p>
+              </div>
+            </div>
+            <div class="accordions-items">
+              <div class="accordions-header">
+                Are my files secure in an FTP server?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  Yes. We value your security and we ensure the confidentiality
+                  of your files by using a paid and highly-secured FTP server.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- item 5 -->
+      <div class="accordions-items">
+        <div class="accordions-header">
+          General Options
+          <span class="icon">+</span>
+        </div>
+        <div class="accordions-content">
+          <div class="nested-accordions">
+            <div class="accordions-items">
+              <div class="accordions-header">
+                How do you keep my files secure?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  We make all effort to keep your images secure so your files
+                  are safe throughout the entire process, from the moment you
+                  send them to us and until we return them to you.
+                </p>
+                <p>
+                  We do not sell your images to third-party entities or share
+                  your photos without your expressed consent.
+                </p>
+                <p>
+                  We also have internal security measures in place to protect
+                  private information you share with us on the website.
+                </p>
+              </div>
+            </div>
+            <div class="accordions-items">
+              <div class="accordions-header">
+                Will you use my images for commercial purposes?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>No.</p>
+                <p>
+                  Our company takes data privacy seriously and respects the
+                  intellectual property rights of our clients.
+                </p>
+                <p>
+                  Learn more about how we treat your image ownership and
+                  copyright on our Terms and Conditions and Privacy Policy.
+                </p>
+              </div>
+            </div>
+            <div class="accordions-items">
+              <div class="accordions-header">
+                Is there a minimum or maximum order requirement to avail of your
+                services?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  We will work on your order regardless of the number of images
+                  you send us.
+                </p>
+                <p>
+                  We aim to please and appreciate your business. We deliver the
+                  same quality service, whether you send us 20 or 1,000 images.
+                </p>
+              </div>
+            </div>
+            <div class="accordions-items">
+              <div class="accordions-header">
+                What file format do you return fully edited files?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  We can send you back your completed files in any Photoshop
+                  file format you want.
+                </p>
+                <p>
+                  We’ll accommodate the file format you request so you avoid the
+                  hassle of converting your files yourself.
+                </p>
+              </div>
+            </div>
+            <div class="accordions-items">
+              <div class="accordions-header">
+                Do I need to send my images/photos in a specific file format?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  We accept all image formats. Please specify in the Free Trial
+                  or Get a Quote form the type of file you prefer when we send
+                  back your photos.
+                </p>
+              </div>
+            </div>
+            <div class="accordions-items">
+              <div class="accordions-header">
+                How do I contact you?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  Our services are available 24/7. Please use our contact form
+                  or reach out to us directly on +1-315-636-4807, or email us at
+                  <a
+                    style="color: #73bf44; text-decoration: none"
+                    href="mailto:contact@clippingpathstudio.com"
+                    class="rank-math-link"
+                    >contact@clippingpathstudio.com</a
+                  >.
+                </p>
+              </div>
+            </div>
+            <div class="accordions-items">
+              <div class="accordions-header">
+                Can I get a free trial?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>
+                  Absolutely! Enjoy our free trial by clicking this link. Follow
+                  the steps to send us your sample photo or image and we’ll send
+                  back your edited photos based on your instructions.
+                </p>
+              </div>
+            </div>
+            <div class="accordions-items">
+              <div class="accordions-header">
+                Do I need to create an account to avail of your services?
+                <span class="icon">+</span>
+              </div>
+              <div class="accordions-content">
+                <p>You don’t need to sign up or log in.</p>
+                <p>
+                  Send us your contact information via our contact form or reach
+                  out to us directly and we’ll get back to you as soon as
+                  possible.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".accordions-header").on("click", function () {
+          const $content = $(this).next(".accordions-content");
+          const $parent = $(this).parent(".accordions-items");
+
+          if ($content.is(":visible")) {
+            $content.slideUp(300);
+            $(this).removeClass("open");
+          } else {
+            $parent
+              .siblings(".accordions-items")
+              .find(".accordions-content")
+              .slideUp(300);
+            $parent
+              .siblings(".accordions-items")
+              .find(".accordions-header")
+              .removeClass("open");
+            $content.slideDown(300);
+            $(this).addClass("open");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
